@@ -18,11 +18,11 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: sync JX
+      - name: sync
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/constanline/XQuickEnergy"
+          source_repo: "https://github.com/constanline/XQuickEnergy.git"
           source_branch: "master"
           destination_branch: "master"
           github_token: ${{ secrets.PAT }}
